@@ -1,3 +1,5 @@
 TODO: A store nem működik. Azt írja nincs hitelesítve. 
 Lehet Laravel 9 verzió miatt?
+TODO: Átnevezni jarat-ra
+TODO: README.md írása
 
