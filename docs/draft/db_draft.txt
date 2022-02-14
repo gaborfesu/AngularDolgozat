@@ -1,0 +1,6 @@
+
+
+vehicles(id, plate, brand, year, price, sold)
+customers(id, name, city, address, cardid)
+purchase(id, date, price, vehicleId, customerId)
+
