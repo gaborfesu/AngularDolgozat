@@ -71,7 +71,9 @@ class VehiclesController extends Controller
      */
     public function update(UpdateVehiclesRequest $request, Vehicles $vehicles)
     {
-        //
+        $vehicles = Vehicles::find($request->id);
+        $vehicles->update($request->all());
+        return $vehicles;        
     }
 
     /**
@@ -80,8 +82,9 @@ class VehiclesController extends Controller
      * @param  \App\Models\Vehicles  $vehicles
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Vehicles $vehicles)
+    public function destroy(Vehicles $vehicles, $id)
     {
-        //
+        return Vehicles::destroy($id);
+        
     }
 }

@@ -78,4 +78,60 @@ http://127.0.0.1:8000/api/vehicles
 
 
 
+---app/Http/Requests/StoreVehiclesRequest.php---
+<?php
+
+namespace App\Http\Requests;
+
+
+class StoreVehiclesRequest extends FormRequest
+{
+    public function authorize()
+    {
+        return true;
+    }
+    //...    
+}
+------
+
+---app/Models/Vehicles.php---
+
+    use HasFactory; 
+
+    protected $fillable = [
+        'plate',
+        'brand',
+        'year',
+        'price',
+        'sold'
+    ];
+------
+
+A migráció nem volt sikeres.
+Ezért volt:
+    php artisan migrate:rollback
+Majd újra:
+    php artisan migrate
+
+Az Insomniában kell: Accept   application/json
+
+
+---app/Http/Requests/UpdateVehiclesRequest.php---
+    public function authorize()
+    {
+        return true;
+    }
+------
+
+
+Itt fel kell venni egy $id paramétert:
+
+---app/Http/Controllers/VehiclesController.php---
+
+    public function destroy(Vehicles $vehicles, $id)
+    {
+        return Vehicles::destroy($id);
+        
+    }
+------
 
