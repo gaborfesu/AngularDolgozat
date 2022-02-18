@@ -21,8 +21,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::group(['middleware' => ['auth:sanctum']], function(){
+    Route::apiResource('vehicles', VehiclesController::class)
+    ->except('index');
+});
 
-Route::apiResource('vehicles', VehiclesController::class);
+Route::get('vehicles', [VehiclesController::class, 'index']);
+
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);

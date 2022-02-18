@@ -135,3 +135,14 @@ Itt fel kell venni egy $id paramétert:
     }
 ------
 
+---api.php---
+Route::group(['middleware' => ['auth:sanctum']], function(){
+    Route::apiResource('vehicles', VehiclesController::class)
+    ->except('index');
+});
+
+Route::get('vehicles', [VehiclesController::class, 'index']);
+
+Route::post('register', [AuthController::class, 'register']);
+Route::post('login', [AuthController::class, 'login']);
+------
