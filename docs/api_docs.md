@@ -6,7 +6,7 @@ A jarmu egy backend szolgáltatást valósít meg REST API formájában. Az adat
 
 ## Adatbázis
 
-Tetszőleges adatbáis használható. Az adatábázisok migrálással létrejönnek.
+Tetszőleges adatbázis használható. Az adatábázisok migrálással létrejönnek.
 
 ## Végpontok
 
