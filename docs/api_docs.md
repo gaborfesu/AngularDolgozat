@@ -21,3 +21,12 @@ Tetszőleges adatbázis használható. Az adatábázisok migrálással létrejö
 
 Azonosítást igénylő végpontok, azonosítás nélkül 401 Unauthorized
 választ adnak.
+
+A /register végponton meg kell adni:
+* felhasználónév
+* email cím
+* jelszó
+
+A /login végponton meg kell adni:
+* felhasználónév
+* jelszó
