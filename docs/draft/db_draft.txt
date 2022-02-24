@@ -1,7 +1,0 @@
-
-jarat adatbázis:
-
-vehicles(id, plate, brand, year, price, sold)
-customers(id, name, city, address, cardid)
-purchases(id, date, price, vehicleId, customerId)
-
