@@ -20,7 +20,7 @@ class AuthController extends Controller
             'email' => $fields['email'],
             'password' => bcrypt($fields['password'])
         ]);
-        $token = $user->createToken('sajatToken')->plainTextToken;
+        $token = $user->createToken('registerToken')->plainTextToken;
         $response = [
             'user' => $user,
             'token' => $token
@@ -31,7 +31,7 @@ class AuthController extends Controller
         if( Auth::attempt([ "name" => $request->name, "password" => $request->password ])) {
  
             $authUser = Auth::user();
-            $success[ "token" ] = $authUser->createToken( "myapptoken" )->plainTextToken;
+            $success[ "token" ] = $authUser->createToken( "loginToken" )->plainTextToken;
             $success[ "name" ] = $authUser->name;
  
             return response( $success);

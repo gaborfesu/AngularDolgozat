@@ -14,6 +14,7 @@ Tetszőleges adatbázis használható. Az adatábázisok migrálással létrejö
 |--------------------|---------|-------------|--------|
 | /api/register      | POST    | nem         | 201 Created |
 | /api/login         | POST    | nem         | 200 OK |
+| /api/logout        | POST    | igen        | 200 OK |
 | /api/vehicles      | GET     | nem         | 200 OK |
 | /api/vehicles      | POST    | igen        | 201 Created |
 | /api/vehicles/{id} | PUT     | igen        | 200 OK |
