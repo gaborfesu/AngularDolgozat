@@ -44,3 +44,7 @@ Az elvárt JSON adatok:
 A /login végponton meg kell adni:
 * felhasználónév
 * jelszó
+
+A /logout végpont használatához csak a tokent
+kell küldeni, és a personal_access_tokens táblában
+törli a tokenhez tartozó rekordot.
