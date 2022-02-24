@@ -27,6 +27,19 @@ A /register végponton meg kell adni:
 * email cím
 * jelszó
 
+Az elvárt JSON adatok:
+
+```json
+{
+	"name": "janos",
+	"email": "janos@zold.lan",
+	"password":"titok",
+	"password_confirmation": "titok"
+}
+```
+
+
+
 A /login végponton meg kell adni:
 * felhasználónév
 * jelszó
